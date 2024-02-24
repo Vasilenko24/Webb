@@ -1,0 +1,282 @@
+* html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+}
+h1 {
+  font-family: Lexend;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 48px;
+}
+.container {
+  max-width: 1040px;
+  height: 100vh;
+  width: 100%;
+  margin-left: 121px;
+}
+
+#result {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+.next {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 48px;
+  cursor: pointer;
+  width: 108px;
+  height: 56px;
+  border-radius: 12px;
+  background: #a2e7f6;
+  transition: 0.2s ease-in;
+  border: none;
+}
+.next:hover {
+  background-color: #783697;
+}
+.options {
+  display: flex;
+}
+.options > div {
+  margin-right: 24px;
+}
+.options > div:last-child {
+  margin-right: 0px;
+}
+/* serviceFilter */
+
+.serviceFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid #c2c2c2;
+  border-radius: 6px;
+  width: 250px;
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 600;
+  height: 100px;
+}
+
+.serviceFilter.active::before {
+  position: absolute;
+  content: "";
+  border: 2px solid #783697;
+  top: -6px;
+  left: -6px;
+  width: 260px;
+  height: 108px;
+  border-radius: 8px;
+}
+/* colors */
+
+.square {
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  border: 1px solid #dedede;
+}
+.square.active {
+  border: 1px solid transparent;
+}
+.square.active::before {
+  position: absolute;
+  content: "";
+  border: 2px solid #783697;
+  top: -6px;
+  left: -6px;
+  width: 108px;
+  height: 108px;
+  border-radius: 8px;
+}
+.square.active::after {
+  position: absolute;
+  content: url(images/icon.svg);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  right: -8px;
+  bottom: -8px;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: #783697;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* weddingFilter */
+
+.image-size {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+/* ceremony bouquets */
+.ceremony-bouquets {
+  display: flex;
+}
+
+/* filtred-images */
+.ceremony-tab {
+  position: relative;
+}
+#totalAmount {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imageGallery-block.active > .imagewrap::before {
+  position: absolute;
+  content: url(images/icon.svg);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  right: -8px;
+  bottom: -8px;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: #783697;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagewrap {
+  position: relative;
+  max-width: 241px;
+  height: 200px;
+}
+.filtred-images {
+  max-width: 241px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quantity.hidden {
+  display: none;
+}
+/* last screen */
+
+.image-logo img {
+  max-width: 232px;
+  min-height: 64px;
+  background-position: center center;
+}
+#form h1 {
+  margin-top: 94px;
+  font-family: Lexend;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+}
+.amount {
+  display: flex;
+  font-family: Lexend;
+  font-size: 41px;
+  font-weight: 600;
+  line-height: 51px;
+  margin-top: 16px;
+}
+.amount span {
+  color: #a2e7f6;
+  margin-right: 3px;
+}
+#form p {
+  max-width: 494px;
+  margin-top: 16px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.description #show {
+  display: inline-block;
+  font-family: Inter;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  border-bottom: 1px solid #000;
+}
+
+.send {
+  width: 231px;
+  height: 56px;
+  padding: 16px, 24px, 16px, 24px;
+  border-radius: 15px;
+  background: #a2e7f6;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+}
+.description-show {
+  height: 100%;
+  margin-top: 48px;
+  max-width: 536px;
+  margin-left: 40px;
+  margin-bottom: 24px;
+}
+
+.description-show.hid {
+  height: 0px;
+  overflow: hidden;
+}
+.description-show h1 {
+  margin-bottom: 24px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.border {
+  margin: 16px 0;
+  border: 1px solid #000;
+}
+
+.big {
+  font-size: 50px;
+}
+
+.spread {
+  max-width: 323px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 108px;
+  font-family: Inter;
+  font-size: 14px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Step-by-Step Filter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="screen1" class="screen" data-modal>
+        <h1>What services you need decorations for?</h1>
+        <div class="options">
+          <div id="Ceremony" class="serviceFilter">Ceremony</div>
+          <div id="Reception" class="serviceFilter">Reception</div>
+          <div id="Ceremony & Reception" class="serviceFilter">
+            Ceremony & Reception
+          </div>
+          <!-- Add more color options as needed -->
+        </div>
+        <button class="next">Next</button>
+      </div>
+      <div id="screen2" class="screen" data-modal>
+        <h1>Choose flower colors</h1>
+        <div class="options">
+          <div
+            id="ivory"
+            style="background-color: #fffff0"
+            class="colorFilter square"
+          ></div>
+          <div
+            id="pink"
+            style="background-color: #ffc0cb"
+            class="colorFilter square"
+          ></div>
+          <div
+            id="gold"
+            style="background-color: #ffd700"
+            class="colorFilter square"
+          ></div>
+          <!-- Add more color options as needed -->
+        </div>
+        <button class="next">Next</button>
+      </div>
+
+      <div id="screen3" class="screen" data-modal>
+        <h1>Choose your wedding style</h1>
+        <div class="options">
+          <div id="Classic" class="weddingFilter square">
+            <img src="images/type/rustic.png" alt="" class="image-size" />
+          </div>
+          <div id="Rustic" class="weddingFilter square">
+            <img src="images/type/classic.png" alt="" class="image-size" />
+          </div>
+
+          <!-- Add more wedding type options as needed -->
+        </div>
+        <button class="next">Next</button>
+      </div>
+
+      <div id="screen4" class="screen" data-modal>
+        <h1>Flower Preferences</h1>
+        <div class="options">
+          <div id="roses" class="flowersFilter square">
+            <img src="images/flowers/rose.png" alt="" />
+          </div>
+          <div id="pions" class="flowersFilter square">
+            <img src="images/flowers/pions.png" alt="" />
+          </div>
+          <!-- Add more wedding type options as needed -->
+        </div>
+        <button class="next">Next</button>
+      </div>
+      <div class="filter-wrapper hidden">
+        <div id="filter1" class="filtred hidden" data-modal>
+          <h1>Choose Ceremony Arrangement</h1>
+          <div class="filter-container"></div>
+          <div class="ceremony-tab">
+            <div id="imageGallery"></div>
+          </div>
+          <button class="next-filter">Next</button>
+        </div>
+
+        <div id="filter2" class="filtred hidden" data-modal>
+          <h1>Choose Reception Arrangement</h1>
+          <div class="filter-container"></div>
+          <div class="ceremony-tab">
+            <div id="imageGallery"></div>
+          </div>
+          <button class="next-filter">Next</button>
+        </div>
+
+        <div id="totalAmount">0</div>
+      </div>
+
+      <form id="form" class="forms hidden" action="">
+        <div class="image-logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <h1>Here We Go!</h1>
+        <p>Your preliminary wedding cost will be:</p>
+        <div class="amount">
+          <span>$</span>
+          <div id="total">21</div>
+        </div>
+        <p>
+          Leave us your contacts and your manager will reach you out as soon as
+          possible to start creating your event with you!
+        </p>
+
+        <div class="description">
+          <span id="show">Show the details ></span>
+          <div class="description-show hid">
+            <h2>Details</h2>
+            <p id="name" class="spread"></p>
+            <p id="email" class="spread"></p>
+            <p id="phone" class="spread"></p>
+            <div class="border" class="spread"></div>
+            <p id="service" class="spread"></p>
+            <div id="style" class="spread"></div>
+            <div id="colors" class="spread"></div>
+            <div id="flowers" class="spread"></div>
+            <p id="ceremon" class="spread"></p>
+            <p id="reciption" class="spread"></p>
+            <div class="border" class="spread"></div>
+            <p id="labor" class="spread">Labor</p>
+            <p id="taxes" class="spread">Taxes</p>
+            <p id="estimated" class="spread">Estimated Total</p>
+          </div>
+        </div>
+
+        <!-- Add more wedding type options as needed -->
+        <button type="submit" class="send">Arrange my Wedding</button>
+      </form>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="state.js"></script>
+    <script type="module" src="sub-states.js"></script>
+
+    <!-- Include script.js as a module -->
+  </body>
+</html>
